@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<h2>Edit User</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div style="text-align:center">
+
+        <table>
+            <tr>
+                <td>
+                    Name :
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Name)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Start Date :
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.start)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    End Date :
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.end)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Update" />
+                </td>
+            </tr>
+        </table>
+
+    </div>
+}  

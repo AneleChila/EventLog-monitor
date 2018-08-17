@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EventLog" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EventLog" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Status" nillable="true" type="tns:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatus" nillable="true" type="tns:ArrayOfStatus" />
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusFlag" type="tns:StatusFlag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:simpleType name="StatusFlag">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AwayExpectingReturn" />
+      <xs:enumeration value="AwayLongerThanExpected" />
+      <xs:enumeration value="At_desk" />
+      <xs:enumeration value="Gone_Home" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StatusFlag" nillable="true" type="tns:StatusFlag" />
+  <xs:complexType name="ArrayOfEventsLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventsLog" nillable="true" type="tns:EventsLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventsLog" nillable="true" type="tns:ArrayOfEventsLog" />
+  <xs:complexType name="EventsLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventType" type="tns:EventTypeFlag" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:StatusFlag" />
+      <xs:element minOccurs="0" name="isRemoteSession" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventsLog" nillable="true" type="tns:EventsLog" />
+  <xs:simpleType name="EventTypeFlag">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Lock" />
+      <xs:enumeration value="UnLock" />
+      <xs:enumeration value="DefaultLock" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventTypeFlag" nillable="true" type="tns:EventTypeFlag" />
+  <xs:complexType name="UnLockEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventType" type="tns:EventTypeFlag" />
+          <xs:element minOccurs="0" name="StatusFlag" type="tns:StatusFlag" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnLockEvent" nillable="true" type="tns:UnLockEvent" />
+  <xs:complexType name="BaseEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseEvent" nillable="true" type="tns:BaseEvent" />
+  <xs:complexType name="UserLockEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventType" type="tns:EventTypeFlag" />
+          <xs:element minOccurs="0" name="StatusFlag" type="tns:StatusFlag" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserLockEvent" nillable="true" type="tns:UserLockEvent" />
+  <xs:complexType name="DefaultLockEvent">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ETA" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventType" type="tns:EventTypeFlag" />
+          <xs:element minOccurs="0" name="StatusFlag" type="tns:StatusFlag" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DefaultLockEvent" nillable="true" type="tns:DefaultLockEvent" />
+</xs:schema>
