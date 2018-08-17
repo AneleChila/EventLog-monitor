@@ -1,0 +1,13 @@
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\bin\Release\MyEmployee.exe.config
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\bin\Release\MyEmployee.exe
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\bin\Release\MyEmployee.pdb
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\KeyboardMonitor.g.cs
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\App.g.cs
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee_MarkupCompile.cache
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee_MarkupCompile.lref
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\KeyboardMonitor.baml
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee.g.resources
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee.Properties.Resources.resources
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee.csproj.GenerateResource.Cache
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee.exe
+C:\Users\anelec\documents\visual studio 2015\Projects\WcfService1\MyEmployee\obj\Release\MyEmployee.pdb

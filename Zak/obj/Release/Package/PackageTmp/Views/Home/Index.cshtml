@@ -1,0 +1,165 @@
+﻿@model IEnumerable<Zak.Models.Event>
+
+@{
+    ViewBag.Title = "EventLog";
+}
+
+
+@using (Html.BeginForm())
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            #header
+                {
+	                background-image : url(darkQ.png);
+	                height: 100vh;
+	                background-size: cover;
+	                background-position : center ;
+	                position:relative;
+	
+                }
+            #status {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+                #status td, #status th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+
+                #status tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                #status tr:hover {
+                    background-color: #ddd;
+                }
+
+                #status th {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color: #0026ff;
+                    color: white;
+                }
+                #container
+                {
+	                color: purple;
+	                text-align:start;
+	                margin-top: 275px;
+	                position: absolute;
+	
+                }
+                #btn 
+                {
+                  font-family: "Sentinel A","Sentinel B",Georgia,serif; 
+                  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+                  background: #4383c5;
+                  color: #FFF;
+                  padding: 6px 20px 7px; 
+                  font-size: 18px;
+                  line-height: 23px;
+                  min-width: 50px;
+                  text-align: center;
+                  text-decoration: none;
+                  vertical-align: middle; 
+                  border: 1px solid #0094ff;
+                  cursor: pointer;
+                  font-weight: 400; 
+                  transition: opacity 0.1s ease-out,background 0.1s ease-out;
+                  -webkit-border-radius: 2px;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
+                  -webkit-transition: opacity 0.1s ease-out,background 0.1s ease-out;
+                }
+        </style>
+    </head>
+
+    <body>
+        <header>
+        <h2>
+            Event log
+        </h2>
+
+        <div class="container">
+            <form id="contact" action="/Form/FormOne" method="post">
+                <h3>Search History</h3>
+
+                <fieldset>
+                    <input name ="name"   placeholder="Name" type="text" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Start Date" type="datetime-local" name="start" value="2017-06-01T08:30" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input type="datetime-local" name="end" value="2017-06-01T08:30" placeholder="End Date" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <table id="status">
+            <tr>
+                <th>
+                    MachineId
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    ETA
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    EventType
+                </th>
+                <th>
+                    isRemoteSession
+                </th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        I am a Robot
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ETA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.isRemoteSession)
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+        </header>
+    </body>
+</html>
+}

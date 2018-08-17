@@ -1,0 +1,132 @@
+﻿@model IEnumerable<global::WebClient.Models.Status>
+
+@{
+    ViewBag.Title = "EventLog";
+}
+
+
+@using (Html.BeginForm())
+{
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="refresh" content="30">
+        <style>
+                #status {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                }
+                #status td, #status th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+
+                #status tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                #status tr:hover {
+                    background-color: #ddd;
+                }
+
+                #status th {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    text-align: left;
+                    background-color: #0026ff;
+                    color: white;
+                }
+                #header
+                {
+	                background-image : url(~/Content/darkQ.png);
+	                height: 100vh;
+	                background-size: cover;
+	                background-position : center ;
+	                position:relative;
+	
+                }
+                
+                
+        </style>
+    </head>
+    
+    <body>
+
+        <img src="@Url.Content("~/Content/quintessence.png")" alt="Sample Image" width="300" height="100" margin-right ="500px" position = "centre"  />
+
+        <h2>
+             
+        </h2>
+
+        <form action="Form/Index" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend> Upload Image </legend>
+                <label for="Image">Image</label>
+                <input type="file" name="Image" />
+                <br />
+                <input type="submit" value="Upload" />
+            </fieldset>
+        </form>
+
+        <h1>Uploaded Image</h1>
+
+            <table id="status">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        ETA
+                    </th>
+                    <th>
+                        Status Flag
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @{Random rn = new Random();
+                            }
+                           <img src="@Url.Content("~/Content/"+item.Name+".png "+" ?" + rn.Next(1,1000))" alt="Sample Image" width="80" height="80" />
+                            
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ETA)
+                        </td>
+                        <td>
+                            
+                            @{
+                               
+                                switch (item.StatusFlag)
+                                {
+                                    case "Gone_Home":
+                                        <img src="@Url.Content("~/Content/Gone_Home.jpg")" width="50" height="50" />
+                                        break;
+                                    case "AwayExpectingReturn":
+                                        <img src="@Url.Content("~/Content/AwayExpectingReturn.png")" width="50" height="50" />
+                                        break;
+                                    case "AwayLongerThanExpected":
+                                        <img src="@Url.Content("~/Content/AwayLongerThanExpected.png")" width="50" height="50" />
+                                        break;
+                                    case "At_desk":
+                                        <img src="@Url.Content("~/Content/At_desk.png")" width="50" height="50" />
+                                        break;
+                                }
+                                //@Html.DisplayFor(modelItem => item.StatusFlag)
+                            }
+                        </td>
+                    </tr>
+                }
+
+
+            </table>
+
+</body>
+    </html>
+}

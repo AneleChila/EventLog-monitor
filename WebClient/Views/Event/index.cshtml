@@ -1,0 +1,55 @@
+﻿@model IEnumerable<global::WebClient.Models.Status>
+
+@{
+    ViewBag.Title = "EventLog";
+}
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        <h2>Status List</h2>
+    </div>
+    <div>
+        <table>
+            <tr style="background-color: #FFFACD; text-align:center">
+                <th style="text-align:left">
+                    Id
+                </th>
+                <th style="text-align:left">
+                    Name
+                </th>
+                <th style="text-align:left">
+                    ETA
+                </th>
+                <th style="text-align:left">
+                    Status Flag
+                </th>
+            </tr>
+
+           
+                @foreach(var item in Model)
+                {
+                    <tr style="background-color: #FFFFF0">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ETA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StatusFlag)
+                        </td>
+                    </tr>
+                }
+            
+
+        </table>
+
+    </div>
+
+
+                }  

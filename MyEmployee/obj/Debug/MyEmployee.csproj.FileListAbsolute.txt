@@ -1,0 +1,13 @@
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\bin\Debug\MyEmployee.exe.config
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\bin\Debug\MyEmployee.exe
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\bin\Debug\MyEmployee.pdb
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\KeyboardMonitor.g.cs
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\App.g.cs
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee_MarkupCompile.cache
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee_MarkupCompile.lref
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\KeyboardMonitor.baml
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee.g.resources
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee.Properties.Resources.resources
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee.csproj.GenerateResource.Cache
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee.exe
+C:\Users\anelec\documents\visual studio 2015\Projects\MyEmployee\obj\Debug\MyEmployee.pdb

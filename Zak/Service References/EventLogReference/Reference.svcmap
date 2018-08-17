@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ba13779-5aae-4ac2-b4ec-1c7763332012" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51933/EventLogAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EventLogAPI.xsd" MetadataType="Schema" ID="61d655c9-bdd0-48ab-8f88-1978158a079d" SourceId="1" SourceUrl="http://localhost:51933/EventLogAPI.svc?xsd=xsd2" />
+    <MetadataFile FileName="EventLogAPI1.xsd" MetadataType="Schema" ID="f5ee5b6e-95d3-415f-997b-01f4b6c67d11" SourceId="1" SourceUrl="http://localhost:51933/EventLogAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="EventLogAPI2.xsd" MetadataType="Schema" ID="209a9e3e-d341-4ff9-9f8f-4d07804ee655" SourceId="1" SourceUrl="http://localhost:51933/EventLogAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="EventLogAPI.wsdl" MetadataType="Wsdl" ID="f0a0f977-b05f-407c-8ed8-c616802be8de" SourceId="1" SourceUrl="http://localhost:51933/EventLogAPI.svc?wsdl" />
+    <MetadataFile FileName="EventLogAPI.disco" MetadataType="Disco" ID="a070e355-783c-4f30-8492-95c197ef4103" SourceId="1" SourceUrl="http://localhost:51933/EventLogAPI.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
